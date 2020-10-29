@@ -20,8 +20,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cart/', include('cart.urls', namespace='cart')),
     path('', include('product.urls', namespace='shop')),
-
 ]
 
 if settings.DEBUG:
